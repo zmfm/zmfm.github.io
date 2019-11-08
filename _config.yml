@@ -1,0 +1,23 @@
+# Site settings
+title: "Zmitrok&Masol House"
+description: "Record Label"
+keywords: "music, artists, bands, concerts, releases, radio, cool, contemporary, modern"
+author: "Zmitrok&Masol House Ltd."
+
+# Images and icons
+shareimage: "static/img/zmfm_sitesocialsharingimage.png"
+icon32: "/static/img/logos/zmfmLogo_32.png"
+icon128: "/static/img/logos/zmfmLogo_128.png"
+icon256: "/static/img/logos/zmfmLogo_256.png"
+icon512: "/static/img/logos/zmfmLogo_512.png"
+icon1024: "/static/img/logos/zmfmLogo_1024.png"
+iconVector: "/static/img/logos/zmfmLogo_vector.svg"
+iconBgColor: "000000"
+
+# Paths
+permalink: /:categories/:day-:month-:year-:title:output_ext
+paginate_path: "/page/:num/"
+
+# Items limits
+paginate: 3
+rssLimit: 20

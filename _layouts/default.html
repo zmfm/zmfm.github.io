@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>{% if page.title != nil %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}</title>
+    
+    <!-- META TAGS -->
+    <meta name="description" content="{% if page.description != nil %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="author" content="{{ site.author }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url | remove: '.html' }}">
+
+    <!-- ICONS -->
+    {% if site.icon32 != nil %}<link rel="icon" type="image/png" sizes="32x32" href="{{ site.icon32 }}"/>{% endif %}
+    {% if site.icon128 != nil %}<link rel="icon" type="image/png" sizes="128x128" href="{{ site.icon128 }}"/>{% endif %}
+    {% if site.icon256 != nil %}<link rel="icon" type="image/png" sizes="256x256" href="{{ site.icon256 }}"/>{% endif %}
+    {% if site.icon512 != nil %}<link rel="icon" type="image/png" sizes="512x512" href="{{ site.icon512 }}"/>{% endif %}
+    {% if site.icon1024 != nil %}<link rel="icon" type="image/png" sizes="1024x1024" href=""/><link rel="apple-touch-icon" href="{{ site.icon1024 }}"/>{% endif %}
+    {% if site.iconVector != nil %}<link rel="mask-icon" href="{{ site.iconVector }}" color="{{ site.iconBgColor }}"/>{% endif %}
+    
+    <!-- SCHEMA.ORG -->
+    <meta itemprop="name" content="{% if page.title != nil %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}">
+    <meta itemprop="description" content="{% if page.description != nil %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta itemprop="image" content="{% if page.shareimage != nil %}{{ page.shareimage }}{% else %}{{ site.shareimage }}{% endif %}">
+    
+    <!-- OPENGRAPH -->
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{% if page.title != nil %}{{ page.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url | remove: '.html' }}">
+    <meta property="og:image" content="{% if page.shareimage != nil %}{{ page.shareimage }}{% else %}{{ site.shareimage }}{% endif %}">
+    
+    <!-- TWITTER CARD -->
+    <meta name="twitter:title" content="{% if page.title != nil %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.description }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.description != nil %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{% if page.shareimage != nil %}{{ page.shareimage }}{% else %}{{ site.shareimage }}{% endif %}">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- VK -->
+    <meta property="vk:image" content="{% if page.shareimage != nil %}{{ page.shareimage }}{% else %}{{ site.shareimage }}{% endif %}" />
+    
+  </head>
+  <body>
+<h1><a href="/">{{ site.title }}</a></h1><hr>
+
+{{ content }}
+
+<hr>Bam!
+  </body>
+</html>
